@@ -1,7 +1,9 @@
----
 name: Build and Publish Docker Image
 
-"on":
+on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -31,5 +33,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ghcr.io/bitu757/meganzbot:latest
-            ghcr.io/bitu757/meganzbot:${{ github.sha }}
+            ghcr.io/${{ github.actor }}/meganzbot:latest
+            ghcr.io/${{ github.actor }}/meganzbot:${{ github.sha }}
