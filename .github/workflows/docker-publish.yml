@@ -31,5 +31,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ghcr.io/itz-fork/meganzbot:latest
-            ghcr.io/itz-fork/meganzbot:${{ github.sha }}
+            ghcr.io/bitu757/meganzbot:latest
+            ghcr.io/bitu757/meganzbot:${{ github.sha }}
